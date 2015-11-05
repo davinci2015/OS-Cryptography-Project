@@ -1,0 +1,61 @@
+<ul class="nav nav-pills nav-stacked">
+	<li><h4><i class="fa fa-key"></i>  Keys</h4></li>
+	<li 
+		ng-click="control.Mashinerija('generate-keys', 'Keys successfuly generated', 'Keys generator error')"
+		role="presentation" 
+		class="active">
+		<a href="#"> Generate keys</a>
+	</li>
+	<li><h4><i class="fa fa-lock"></i> Symmetric </li>
+	<li 
+		ng-click="control.Mashinerija('encrypt-symmetric','File successfully encrypted','File encryption error')" 
+		role="presentation" 
+		class="active">
+		<a href="#"> Encrypt</a>
+	</li>
+	<li 
+		ng-click="control.Mashinerija('decrypt-symmetric', 'File successfully decrypted', 'File decryption error')" 
+		role="presentation" 
+		class="active">
+		<a href="#"> Decrypt</a>
+	</li>
+	<li><h4><i class="fa fa-lock"></i> Asymmetric </li>
+	<li 
+		ng-click="control.Mashinerija('encrypt-asymmetric', 'File successfully encrypted', 'File encryption error')" 
+		role="presentation" 
+		class="active">
+		<a href="#"> Encrypt</a>
+	</li>
+	<li 
+		ng-click="control.Mashinerija('decrypt-asymmetric', 'File successfully decrypted', 'File decryption error')" 
+		role="presentation" 
+		class="active">
+		<a href="#"> Decrypt</a>
+	</li>
+	<li><h4><i class="fa fa-shield"></i> Hash and Digital signature
+	</li>
+	<li 
+		ng-click="control.Mashinerija('hash', 'Hash success', 'Hash Error')" 
+		role="presentation" 
+		class="active">
+		<a href="#"> Hash</a>
+	</li>
+	<li 
+		ng-click="control.Mashinerija('digital-signature', 'Digital signature success', 'Digital signature Error')" 
+		role="presentation" 
+		class="active">
+		<a href="#"> Digital Signature</a>
+	</li>
+	<li 
+		ng-click="control.CheckDigitalSignature()" 
+		role="presentation" 
+		class="active">
+		<a href="#"> Check Digital Signature</a>
+	</li>
+	<li 
+		ng-click="control.CleanTextFiles()" 
+		role="presentation" 
+		class="active--danger">
+		<a href="#"> Reset</a>
+	</li>
+</ul>

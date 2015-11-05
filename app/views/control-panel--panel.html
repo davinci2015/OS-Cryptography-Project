@@ -1,0 +1,32 @@
+<h4><strong>File management</strong></h4>
+<form>
+	<div class="form-group">
+		<select ng-model="file.key" ng-change="$root.Update()" class="form-control">
+			<option value="" selected disabled>Select file</option>
+			<optgroup label="Keys">
+				<option value="/keys/secret-key.txt">Secret key</option>
+				<option value="/keys/private-key.txt">Private key</option>
+				<option value="/keys/public-key.txt">Public key</option>
+				<optgroup>
+				<optgroup label="Symmetric encryption">
+					<option value="/file1.txt">File 1</option>
+					<option value="/file1-encrypted.txt">File 1 - Symmetric encrypted</option>
+					<option value="/file1-decrypted.txt">File 1 - Symmetric decrypted</option>
+				</optgroup>
+				<optgroup label="Asymmetric encryption">
+					<option value="/file2.txt">File 2</option>
+					<option value="/file2-encrypted.txt">File 2 - Asymmetric encrypted</option>
+					<option value="/file2-decrypted.txt">File 2 - Asymmetric decrypted</option>
+				</optgroup>
+				<optgroup label="Hash and digital signature">
+					<option value="/file3.txt">File 3</option>
+					<option value="/file3-hash.txt">File 3 - Hash</option>
+					<option value="/file3-digital-signature.txt">File 3 - Digital signature</option>
+				</optgroup>
+				</select>
+			</div>
+		<div class="form-group">
+			<textarea ng-model="file.text"  class="form-control" rows="16"></textarea>
+		</div>
+		<button ng-click="file.Save()" class="btn btn-primary pull-right"><i class="fa fa-floppy-o"></i> Save file</button>
+</form>
